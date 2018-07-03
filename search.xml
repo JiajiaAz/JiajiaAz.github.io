@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title>圆明园</title>
+      <link href="/2018/07/02/%E5%9C%86%E6%98%8E%E5%9B%AD/"/>
+      <url>/2018/07/02/%E5%9C%86%E6%98%8E%E5%9B%AD/</url>
+      <content type="html"><![CDATA[<p><img src="/images/yuanmingyuan/1.jpg" alt=""><br><br><br><img src="/images/yuanmingyuan/2.jpg" alt=""><br><br><br><img src="/images/yuanmingyuan/3.jpg" alt=""><br><br><br><img src="/images/yuanmingyuan/4.jpg" alt=""><br><br><br><img src="/images/yuanmingyuan/5.jpg" alt=""><br><br><br><img src="/images/yuanmingyuan/6.jpg" alt=""><br><br><br><img src="/images/yuanmingyuan/7.jpg" alt=""><br><br><br><img src="/images/yuanmingyuan/8.jpg" alt=""><br><br><br><a id="more"></a></p>]]></content>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>清华园</title>
+      <link href="/2018/07/02/%E6%B8%85%E5%8D%8E%E5%9B%AD/"/>
+      <url>/2018/07/02/%E6%B8%85%E5%8D%8E%E5%9B%AD/</url>
+      <content type="html"><![CDATA[<p><img src="/images/qinghua/1.jpg" alt=""><br><br><br><img src="/images/qinghua/2.jpg" alt=""><br><br><br><img src="/images/qinghua/3.jpg" alt=""><br><br><br><img src="/images/qinghua/4.jpg" alt=""><br><br><br><img src="/images/qinghua/5.jpg" alt=""><br><br><br><img src="/images/qinghua/6.jpg" alt=""><br><br></p>]]></content>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>Hexo+git建站流程及注意事项</title>
+      <link href="/2018/06/30/Hexo-git%E5%BB%BA%E7%AB%99%E6%B5%81%E7%A8%8B%E5%8F%8A%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
+      <url>/2018/06/30/Hexo-git%E5%BB%BA%E7%AB%99%E6%B5%81%E7%A8%8B%E5%8F%8A%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</url>
+      <content type="html"><![CDATA[<center>本文介绍了使用Hexo博客框架搭配github平台搭建个人主页的详细步骤，并针对作者在搭建过程中遇到的问题进行了说明。</center><a id="more"></a>   <h4 id="建站基本流程"><a href="#建站基本流程" class="headerlink" title="建站基本流程"></a>建站基本流程</h4><p>1、安装<a href="http://nodejs.org/" target="_blank" rel="noopener">nodejs</a>、<a href="http://git-scm.com/" target="_blank" rel="noopener">git</a><br>2、安装hexo</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>3、建站，folder为站点文件夹名称</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure><p>4、 本地试运行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git clean //清除原有服务器数据</span><br><span class="line">$ git generate //生成静态文件，可简写为 git g</span><br><span class="line">$ git server //启动本地服务</span><br></pre></td></tr></table></figure><p>启动服务器后，默认情况下本地访问网址为： <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p><h6 id="注意：网站信息配置参考官网-hexo"><a href="#注意：网站信息配置参考官网-hexo" class="headerlink" title="注意：网站信息配置参考官网 hexo"></a>注意：网站信息配置参考官网 <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">hexo</a></h6><p><br></p><h4 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new post &lt;title&gt;</span><br></pre></td></tr></table></figure><p>使用上述命令发布新文章后，会在/source/_posts 文件夹下生成以 <code>&lt;title&gt;</code> 命名的 .md文件，在该文件中编辑文章内容。</p><h6 id="如何引用本地图片？"><a href="#如何引用本地图片？" class="headerlink" title="如何引用本地图片？"></a>如何引用本地图片？</h6><p>1、 将 _config.yml 配置文件中的 post_asset_folder 项修改为 true；<br>2、修改上述属性后，再次执行发布文章命令，在生成以 <code>&lt;title&gt;</code> 命名的 md. 文件的同时，还会生成同名文件夹，将需要引用的图片放在此文件夹中；<br>3、通过如下语法在 .md 文件中引用图片</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img 图片名称.jpg 图片的说明 %&#125;</span><br></pre></td></tr></table></figure><p><br></p><h4 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h4><p>1、注册github账号，并新建仓库，注意，<strong>仓库名必须与账号名相同</strong>；<br>2、修改  _config.yml 配置文件中的部署参数</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:flyoob/flyoob.github.io.git //github仓库地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p>3、为 Hexo 安装 Git 插件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>4、部署命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure><p>部署成功后即可通过网址 <code>https://username.github.io/</code>  <a href="https://jiajiaaz.github.io/" target="_blank" rel="noopener">https://jiajiaaz.github.io/</a> 访问博客主页。</p><h6 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h6><p>如果本地的git还未曾与 github建立连接，则需要初始化用户信息并验证 ssh key 以建立连接。<br>配置用户身份信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;JiajiaAz&quot;</span><br><span class="line">$ git config --global user.email &quot;635439054@qq.com&quot;</span><br></pre></td></tr></table></figure></p><p>生成秘钥：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;635439054@qq.com&quot;</span><br></pre></td></tr></table></figure><p>连续三个回车后生成密钥，存储在：C:\Users\Administrator.sshid_rsa.pub 文件中。复制秘钥，并粘贴到github的ssh key 选中。<br>验证秘钥是否添加成功：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure><p><br></p><h4 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h4><p>1、挑选到合适的主题后，复制其github地址，并将其克隆到themes文件夹下；<br>2、将  _config.yml 配置文件中的theme 属性修改为新的主题名。<br><br></p><h4 id="“cannot-get-xxx”的解决办法"><a href="#“cannot-get-xxx”的解决办法" class="headerlink" title="“cannot get/xxx”的解决办法"></a>“cannot get/xxx”的解决办法</h4><p>博客搭建好后，在点击某些菜单时，遇到 “cannot get/xxx”的问题，例如，在点击 About 菜单时，弹出的页面显示 “cannot get/about/“。这是因为没有初始化 about目录，可通过以下命令解决：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page &quot;about&quot;</span><br></pre></td></tr></table></figure><h4 id="一些小技巧"><a href="#一些小技巧" class="headerlink" title="一些小技巧"></a>一些小技巧</h4><p>1、 博客首页默认显示文章的一部分，只要再文章中加上<!--more--> 标记，该标记以后的部分就不再显示，只有点击全部展开之后才显示。</p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> 博客搭建 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>lightroom中的一些小技巧</title>
+      <link href="/2018/06/30/lightroom%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <url>/2018/06/30/lightroom%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p><center>lightroom是高效摄影后期必不可少的工具，本文是作者在学习网易公开课上的《lightroom懒人班》课程后，对lightroom中一些实用功能的总结。</center><br><a id="more"></a></p><h3 id="1、lightroom预设"><a href="#1、lightroom预设" class="headerlink" title="1、lightroom预设"></a>1、lightroom预设</h3><h3 id="2、lightroom快捷键"><a href="#2、lightroom快捷键" class="headerlink" title="2、lightroom快捷键"></a>2、lightroom快捷键</h3><h3 id="3、lightroom照片筛选（打星，标颜色等）"><a href="#3、lightroom照片筛选（打星，标颜色等）" class="headerlink" title="3、lightroom照片筛选（打星，标颜色等）"></a>3、lightroom照片筛选（打星，标颜色等）</h3><h3 id="4、复制预设、同步照片参数"><a href="#4、复制预设、同步照片参数" class="headerlink" title="4、复制预设、同步照片参数"></a>4、复制预设、同步照片参数</h3><h3 id="5、照片导出（限制照片大小）"><a href="#5、照片导出（限制照片大小）" class="headerlink" title="5、照片导出（限制照片大小）"></a>5、照片导出（限制照片大小）</h3><h3 id="6、二次构图技巧（按比例裁剪、1-1裁剪、由宗画幅变为横画幅等）"><a href="#6、二次构图技巧（按比例裁剪、1-1裁剪、由宗画幅变为横画幅等）" class="headerlink" title="6、二次构图技巧（按比例裁剪、1:1裁剪、由宗画幅变为横画幅等）"></a>6、二次构图技巧（按比例裁剪、1:1裁剪、由宗画幅变为横画幅等）</h3><h3 id="7、一组照片的4321原则：4张从头到脚的全身照、3张膝盖到头部的半身照、2张胸部到头部的照片、一张特写照"><a href="#7、一组照片的4321原则：4张从头到脚的全身照、3张膝盖到头部的半身照、2张胸部到头部的照片、一张特写照" class="headerlink" title="7、一组照片的4321原则：4张从头到脚的全身照、3张膝盖到头部的半身照、2张胸部到头部的照片、一张特写照"></a>7、一组照片的4321原则：4张从头到脚的全身照、3张膝盖到头部的半身照、2张胸部到头部的照片、一张特写照</h3><h3 id="8、由最暗到最亮的色调调整分别为5等分，分别对应为：黑色色阶，阴影，曝光度，高光，白色色阶，直方图描述了照片像素分布在这5等分中的比例。"><a href="#8、由最暗到最亮的色调调整分别为5等分，分别对应为：黑色色阶，阴影，曝光度，高光，白色色阶，直方图描述了照片像素分布在这5等分中的比例。" class="headerlink" title="8、由最暗到最亮的色调调整分别为5等分，分别对应为：黑色色阶，阴影，曝光度，高光，白色色阶，直方图描述了照片像素分布在这5等分中的比例。"></a>8、由最暗到最亮的色调调整分别为5等分，分别对应为：黑色色阶，阴影，曝光度，高光，白色色阶，直方图描述了照片像素分布在这5等分中的比例。</h3><h3 id="9、色温：照片整体上给人的饱满温和还是单调冷艳的感觉，蓝色对应冷，黄色对应暖；lightroom里面色温即可理解为蓝色到黄色之间的色彩倾向。"><a href="#9、色温：照片整体上给人的饱满温和还是单调冷艳的感觉，蓝色对应冷，黄色对应暖；lightroom里面色温即可理解为蓝色到黄色之间的色彩倾向。" class="headerlink" title="9、色温：照片整体上给人的饱满温和还是单调冷艳的感觉，蓝色对应冷，黄色对应暖；lightroom里面色温即可理解为蓝色到黄色之间的色彩倾向。"></a>9、色温：照片整体上给人的饱满温和还是单调冷艳的感觉，蓝色对应冷，黄色对应暖；lightroom里面色温即可理解为蓝色到黄色之间的色彩倾向。</h3><h3 id="10、色调：指的是一幅画中画面色彩的总体倾向；在不同颜色的物体上，笼罩着某一种色彩，使不同颜色的物体都带有同一色彩倾向，这样的色彩现象就是色调。lightroom中的色调就是绿色—洋红之间的色彩倾向"><a href="#10、色调：指的是一幅画中画面色彩的总体倾向；在不同颜色的物体上，笼罩着某一种色彩，使不同颜色的物体都带有同一色彩倾向，这样的色彩现象就是色调。lightroom中的色调就是绿色—洋红之间的色彩倾向" class="headerlink" title="10、色调：指的是一幅画中画面色彩的总体倾向；在不同颜色的物体上，笼罩着某一种色彩，使不同颜色的物体都带有同一色彩倾向，这样的色彩现象就是色调。lightroom中的色调就是绿色—洋红之间的色彩倾向"></a>10、色调：指的是一幅画中画面色彩的总体倾向；在不同颜色的物体上，笼罩着某一种色彩，使不同颜色的物体都带有同一色彩倾向，这样的色彩现象就是色调。lightroom中的色调就是绿色—洋红之间的色彩倾向</h3><h3 id="11、色相：橙色对应亚洲人的皮肤"><a href="#11、色相：橙色对应亚洲人的皮肤" class="headerlink" title="11、色相：橙色对应亚洲人的皮肤"></a>11、色相：橙色对应亚洲人的皮肤</h3><h3 id="12、三个优秀的摄影社区："><a href="#12、三个优秀的摄影社区：" class="headerlink" title="12、三个优秀的摄影社区："></a>12、三个优秀的摄影社区：</h3><p><a href="http://www.poco.cn/" target="_blank" rel="noopener">http://www.poco.cn/</a><br><a href="https://tuchong.com/" target="_blank" rel="noopener">https://tuchong.com/</a><br><a href="http://www.lofter.com/login?urschecked=true" target="_blank" rel="noopener">http://www.lofter.com/login?urschecked=true</a><br>优秀设计<br><a href="https://www.uisdc.com/" target="_blank" rel="noopener">https://www.uisdc.com/</a><br><a href="https://www.zcool.com.cn/" target="_blank" rel="noopener">https://www.zcool.com.cn/</a><br><a href="https://www.vcg.com/" target="_blank" rel="noopener">https://www.vcg.com/</a><br><a href="https://www.behance.net/" target="_blank" rel="noopener">https://www.behance.net/</a></p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> 摄影后期 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>陈家祠</title>
+      <link href="/2018/06/24/%E9%99%88%E5%AE%B6%E7%A5%A0/"/>
+      <url>/2018/06/24/%E9%99%88%E5%AE%B6%E7%A5%A0/</url>
+      <content type="html"><![CDATA[<center> 六月底，参加了实验室组织的留学生中海达游学活动。课程结束后，大家一起参观了广州市陈家书院，俗称陈家祠，一处传统的岭南祠堂建筑，镜头底下，老建筑的古色古香愈发韵味十足……</center><a id="more"></a><p><img src="/images/3T0A5111.jpg" alt=""><br><br></p><p><img src="/images/3T0A5094.jpg" alt=""></p><p><br></p><p><img src="/images/3T0A5108.jpg" alt=""></p><p><br></p><p><img src="/images/3T0A5105.jpg" alt=""></p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> 照片分享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+  
+  
+</search>
